@@ -1,24 +1,4 @@
-'''
-data=[5,4,1,2,3,4]
-n=len(data)
-sum=0
-for i in data:
-    sum+=i
 
-mean=sum/n
-print(mean)
-print(sum)
-'''
-'''
-from collections import Counter
-data="Op(Veer)BOss"
-data2=Counter(data)
-print(data2)
-data3=data2.items()
-print(data3)
-val=data2.values()
-print(val)
-'''
 import csv
 from collections import Counter
 with open('C:/Users/dell/Desktop/Python/calculate.py/SOCR-HeightWeight.csv',newline='') as f:
@@ -48,15 +28,15 @@ else:
 print("medianis"+str(median))
 #mode
 data=Counter(newdata)
-mode_data_for_range = { "50-60": 0, "60-70": 0, "70-80": 0 }
+mode_data_for_range = { "85-115": 0, "115-135": 0, "135-160": 0 }
 
 for height, occurence in data.items():
-    if 50 < float(height) <   60:
-        mode_data_for_range["50-60"] += occurence 
-    elif 60 < float(height) < 70:
-         mode_data_for_range["60-70"] += occurence
-    elif 70 < float(height) < 80:
-         mode_data_for_range["70-80"] += occurence
+    if 85 < float(height) <   115:
+        mode_data_for_range["85-115"] += occurence 
+    elif 115 < float(height) < 135:
+         mode_data_for_range["115-135"] += occurence
+    elif 135 < float(height) < 160:
+         mode_data_for_range["135-160"] += occurence
 mode_range, mode_occurence = 0, 0
 
 for range, occurence in mode_data_for_range.items():
